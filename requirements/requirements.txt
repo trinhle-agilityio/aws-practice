@@ -1,0 +1,28 @@
+# Current framework
+# https://docs.djangoproject.com/en/1.10/
+ django==3.0.1
+
+# Django Extensions is a collection of custom extensions for the Django Framework.
+# https://pypi.org/project/django-extensions/
+django-extensions==2.2.1
+
+# https://pypi.org/project/django-environ/
+django-environ==0.4.5
+
+# Psycopg is the most popular PostgreSQL database adapter for the Python
+# https://pypi.org/project/psycopg2/
+psycopg2==2.8.4
+
+# https://pypi.org/project/psycopg2binary/
+psycopg2-binary==2.8.4
+
+# Install Django and Django REST framework into the virtual environment
+djangorestframework
+django-rest-swagger
+django-filter==0.9.2
+django-filters==0.1.0
+
+# A Python library for generating fake data.
+# https://pypi.python.org/pypi/fake-factory
+Faker==2.0.1
+factory-boy==2.12.0
