@@ -2,31 +2,29 @@ version: '2'
 
 services:
   aws-django-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     command:  python manage.py runserver 0.0.0.0:8000
     container_name: aws-django-app
     ports:
       - "8000:8000"
     volumes:
       - .:/code
-    environment:
-      POSTGRES_HOST: 'postgres'
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: aws-test
-    links:
-        - postgres
+  #   environment:
+  #     POSTGRES_HOST: 'postgres'
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_DB: aws-test
+  #   links:
+  #       - postgres
 
-  postgres:
-    image: postgres:9.6.6
-    container_name: postgres
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: aws-test
-    volumes:
-      - practice_db:/var/lib/postgresql/data
+  # postgres:
+  #   image: postgres:9.6.6
+  #   container_name: postgres
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_DB: aws-test
+  #   volumes:
+  #     - practice_db:/var/lib/postgresql/data
