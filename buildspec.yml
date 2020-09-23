@@ -6,7 +6,7 @@ phases:
       - aws --version
       - echo list directory file ...
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI = 934585507285.dkr.ecr.ap-southeast-1.amazonaws.com/practice
+      - REPOSITORY_URI=934585507285.dkr.ecr.ap-southeast-1.amazonaws.com/practice
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
